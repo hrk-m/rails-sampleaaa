@@ -42,3 +42,7 @@ module App
     config.api_only = true
   end
 end
+
+
+# Hosts を追加
+config.hosts << 'sample-rails.onrender.com'

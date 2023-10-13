@@ -2,7 +2,7 @@ FROM ruby:3.1.2
 
 ENV TZ Asia/Tokyo
 ENV APP_ROOT /usr/src/app
-ENV BUILD_PACKAGES="vim mariadb-client"
+ENV BUILD_PACKAGES="vim postgresql-client"
 
 WORKDIR $APP_ROOT
 

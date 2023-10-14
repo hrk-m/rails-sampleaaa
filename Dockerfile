@@ -21,11 +21,8 @@ RUN \
   bundle install && \
   rm -rf ~/.gem
 
-RUN \
-  rails db:create db:migrate
-
 COPY . $APP_ROOT/
 
 EXPOSE 3000
 
-CMD ["rails", "db:create", "db:migrate", ""]
+CMD ["rails", "server", "-b", "0.0.0.0"]

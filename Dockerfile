@@ -24,6 +24,7 @@ RUN \
 COPY . $APP_ROOT/
 
 EXPOSE 3000
-RUN bin/render-build.sh
+
+RUN bundle exec rails db:migrate
 
 CMD ["rails", "server", "-b", "0.0.0.0"]

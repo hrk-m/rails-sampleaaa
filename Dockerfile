@@ -4,8 +4,8 @@ ENV TZ Asia/Tokyo
 ENV APP_ROOT /usr/src/app
 ENV BUILD_PACKAGES="vim postgresql-client"
 
-ARG DATABASE_URL
-ENV DATABASE_URL=$DATABASE_URL
+# ARG DATABASE_URL
+# ENV DATABASE_URL=$DATABASE_URL
 
 WORKDIR $APP_ROOT
 
@@ -28,6 +28,6 @@ COPY . $APP_ROOT/
 
 EXPOSE 3000
 
-RUN bundle exec rails db:migrate
+# RUN bundle exec rails db:migrate
 
 CMD ["rails", "server", "-b", "0.0.0.0"]

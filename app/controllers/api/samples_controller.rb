@@ -1,5 +1,5 @@
 class Api::SamplesController < ApplicationController
   def index
-    render json: User.all
+    render json: Book.all
   end
 end
